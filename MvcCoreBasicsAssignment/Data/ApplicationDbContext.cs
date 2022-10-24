@@ -13,7 +13,7 @@ namespace MvcCoreBasicsAssignment.Data
         public DbSet<School> Schools { get; set; }
         public DbSet<Student> Students { get; set; }
 
-        public DbSet<Teacher> teachers { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
 
     }
 }

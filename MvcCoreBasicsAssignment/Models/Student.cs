@@ -9,5 +9,14 @@
         
         public virtual ICollection<Teacher> Teachers { get; set; }
 
+        public Student()
+        {
+
+        }
+        public Student(string Fname, string Lname)
+        {
+            FirstName = Fname;
+            LastName = Lname;
+        }
     }
 }
