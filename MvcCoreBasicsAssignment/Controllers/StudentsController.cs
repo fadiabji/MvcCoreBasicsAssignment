@@ -6,12 +6,12 @@ using System;
 
 namespace MvcCoreBasicsAssignment.Controllers
 {
-    public class StudentController : Controller
+    public class StudentsController : Controller
     {
 
         private readonly IStudentService _studentService;
 
-        public StudentController(IStudentService studentService)
+        public StudentsController(IStudentService studentService)
         {
             _studentService = studentService;
         }

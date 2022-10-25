@@ -21,8 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Student\Components\" />
-    <Folder Include="Views\Teacher\Components\" />
+    <Folder Include="Views\Students\Components\" />
+    <Folder Include="Views\Teachers\Components\" />
   </ItemGroup>
 
 </Project>

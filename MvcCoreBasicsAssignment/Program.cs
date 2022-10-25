@@ -18,7 +18,8 @@ builder.Services.AddControllersWithViews();
 
 
 // adding this services as dependency injection to project.
-builder.Services.AddScoped<IStudentService, StudentService>(); 
+builder.Services.AddScoped<IStudentService, StudentService>();
+builder.Services.AddScoped<ITeacherService, TeacherService>();
 
 
 
