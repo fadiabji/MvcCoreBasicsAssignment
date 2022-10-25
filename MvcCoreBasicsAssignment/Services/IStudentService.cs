@@ -2,10 +2,9 @@
 
 namespace MvcCoreBasicsAssignment.Services
 {
-    public interface ICreateListService
+    public interface IStudentService
     {
         public void CreateStudents();
-
-        
+        IEnumerable<Student> GetStudentSList();
     }
 }

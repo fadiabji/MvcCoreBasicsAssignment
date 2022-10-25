@@ -7,11 +7,14 @@ using System;
 namespace MvcCoreBasicsAssignment.Services
 
 {
-    public class CreateListsService : ICreateListService
+    public class StudentService : IStudentService
     {
-        public  ApplicationDbContext db;
+        public  ApplicationDbContext _db;
 
-       
+        public StudentService(ApplicationDbContext db)
+        {
+            _db = db;
+        }
         public void CreateStudents()
         {
             List<Student> studentsList = new List<Student>()
@@ -23,9 +26,14 @@ namespace MvcCoreBasicsAssignment.Services
                 new Student( "Bob", "Marley"),
                 new Student( "Iron", "Maiden"),
             };
-            db.Students.AddRange(studentsList);
-            db.SaveChanges();
-            
+            _db.Students.AddRange(studentsList);
+            _db.SaveChanges();
+        }
+
+        public IEnumerable<Student> GetStudentSList()
+        {
+            var students = _db.Students.Select(c => c).OrderBy(c => c.FirstName).ToList();
+            return students;
         }
 
     }
