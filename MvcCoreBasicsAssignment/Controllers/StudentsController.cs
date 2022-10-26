@@ -36,5 +36,27 @@ namespace MvcCoreBasicsAssignment.Controllers
             _studentService.CreateStudents();
             return RedirectToAction("Index");
         }
+
+
+        // GET: Students/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Studnets/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("FirstName,LastName")] Student s)
+        {
+            if (ModelState.IsValid)
+            {
+                _studentService.CreateOneStudent(s);
+                return RedirectToAction("Index");
+            }
+            return View(s);
+        }
     }
 }

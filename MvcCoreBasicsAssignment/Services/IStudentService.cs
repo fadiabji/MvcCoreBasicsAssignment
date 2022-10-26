@@ -6,5 +6,7 @@ namespace MvcCoreBasicsAssignment.Services
     {
         public void CreateStudents();
         IEnumerable<Student> GetStudentSList();
+
+        public void CreateOneStudent(Student s);
     }
 }

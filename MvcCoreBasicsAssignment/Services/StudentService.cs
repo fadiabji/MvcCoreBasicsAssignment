@@ -30,6 +30,13 @@ namespace MvcCoreBasicsAssignment.Services
             _db.SaveChanges();
         }
 
+
+        public void CreateOneStudent(Student s)
+        {
+            _db.Students.Add(s);
+            _db.SaveChanges();
+        }
+
         public IEnumerable<Student> GetStudentSList()
         {
             var students = _db.Students.Select(c => c).OrderBy(c => c.FirstName).ToList();
